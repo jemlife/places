@@ -13,4 +13,12 @@ describe(Places) do
       expect(Places.all()).to(eq([]))
     end
   end
+  describe('#store') do
+    it('saves input') do
+      test_places = Places.new('England')
+      test_places.store()
+      expect(Places.all()).to(eq([test_places]))
+    end
+  end
+
 end

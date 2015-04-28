@@ -1,0 +1,16 @@
+<h1> PLACES YOU'VE BEEN </h1>
+<h1></h1>
+
+<h3> Here are all the places you have been</h3>
+
+<ul>
+  <% @places.each() do |place| %>
+  <li> <%= place.description() %> </li>
+  <% end %>
+</ul>
+
+<form action= "/place_form" method= "post">
+  <label for= "place"> Please enter a new Place you have been:</label>
+  <input id= "place" name= 'place' type= 'text'>
+  <button type="submit"> Add NOW! </button>
+</form>
