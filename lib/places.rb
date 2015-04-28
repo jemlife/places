@@ -1,8 +1,14 @@
 class Places
-  define_method(:initialize) do |places|
-    @places = places
+  @@places = []
+
+  define_method(:initialize) do |place|
+    @place = place
   end
   define_method(:description) do
-    @places
+    @place
   end
+  define_singleton_method(:all) do
+    @@places
+  end
+
 end

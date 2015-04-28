@@ -8,4 +8,9 @@ describe(Places) do
       expect(test_places.description()).to(eq('Costa Rica'))
     end
   end
+  describe('.all') do
+    it('outputs empty array') do
+      expect(Places.all()).to(eq([]))
+    end
+  end
 end
